@@ -1,0 +1,26 @@
+<nav class="blue darken-4">
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Booking</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      {{#if isIndex}}
+      <li class="active"><a href="/">Hotels</a></li>
+      {{else}}
+      <li><a href="/">Hotels</a></li>
+      {{/if}}
+
+      {{#if isAdd}}
+      <li class="active"><a href="/add">Add hotel</a></li>
+      {{else}}
+      <li><a href="/add">Add hotel</a></li>
+      {{/if}}
+
+      {{#if isDelete}}
+      <li class="active"><a href="/delete">Delete hotel</a></li>
+      {{else}}
+      <li><a href="/delete">Delete hotel</a></li>
+      {{/if}}
+
+    </ul>
+  </div>
+</nav>

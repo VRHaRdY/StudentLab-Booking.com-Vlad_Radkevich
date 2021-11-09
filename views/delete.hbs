@@ -1,0 +1,25 @@
+<!--Главная страница HTML API со списком всех отелей-->
+<h2>Hotels list(CHOOSE WHAT TO DELETE)</h2>
+{{#if hotels.length}}
+<form action="/choose" method="POST">
+    <ul>
+        {{#each hotels}} 
+            <li class="hotel">   
+            <label>
+            {{#if completed}}
+                <input type="checkbox" checked name="choosed">
+                <span class="choosed">{{title}},{{number_of_rooms}},{{image}}</span>
+            {{else}}
+                <input type="checkbox" name="choosed">
+                <span>{{title}},{{number_of_rooms}},{{image}}</span>
+            {{/if}}      
+                <input type="hidden" value="{{_id}}" name="id">       
+            </label>   
+        </li> 
+        {{/each}}
+    </ul>
+    <button class="btn btn-small" type="submit">Delete</button>
+</form>
+{{else}}
+<p>No hotels in database!</p>
+{{/if}}

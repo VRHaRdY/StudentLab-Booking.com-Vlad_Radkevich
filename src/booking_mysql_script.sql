@@ -5,69 +5,61 @@ USE `booking`;
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
-	`id` 				int 		NOT NULL 	AUTO_INCREMENT,
-	`login` 			varchar(20) NOT NULL 	AUTO_INCREMENT 		UNIQUE,
-	`password`  		varchar(20) NOT NULL 	AUTO_INCREMENT 		UNIQUE,
-	PRIMARY KEY (`id`)
+	`id` 			int 			NOT NULL 	AUTO_INCREMENT		PRIMARY KEY,
+	`login` 		varchar(20) 	NOT NULL 	AUTO_INCREMENT 		UNIQUE,
+	`password`  	varchar(20)		NOT NULL 	AUTO_INCREMENT 		UNIQUE
 );
 
 DROP TABLE IF EXISTS `roles`;
 CREATE TABLE `roles` (
-	`id` 				BINARY 		NOT NULL 	AUTO_INCREMENT,
-	`name` 				varchar(5) 	NOT NULL 						UNIQUE,
-	PRIMARY KEY (`id`)
+	`id` 			BINARY 			NOT NULL 	AUTO_INCREMENT		PRIMARY KEY,
+	`name` 			varchar(5) 		NOT NULL 						UNIQUE
 );
 
 DROP TABLE IF EXISTS `users_roles`;
 CREATE TABLE `users_roles` (
-	`id` 				int 		NOT NULL 	AUTO_INCREMENT,
-	`user_id` 			int 		NOT NULL 	AUTO_INCREMENT,
-	`roles_id` 			BINARY 		NOT NULL 	AUTO_INCREMENT,
-	PRIMARY KEY (`id`)
+	`id` 			int 			NOT NULL 	AUTO_INCREMENT		PRIMARY KEY,
+	`user_id` 		int 			NOT NULL 	AUTO_INCREMENT,
+	`roles_id` 		BINARY 			NOT NULL 	AUTO_INCREMENT
 );
 
 DROP TABLE IF EXISTS `bookinf_info`;
 CREATE TABLE `booking_info` (
-	`id` 				int 		NOT NULL 	AUTO_INCREMENT,
-	`booking_date` 		DATE 		NOT NULL,
-	`room_id` 			int 		NOT NULL,
-	`user_id` 			int 		NOT NULL,
-	PRIMARY KEY (`id`)
+	`id` 			int 			NOT NULL 	AUTO_INCREMENT		PRIMARY KEY,
+	`booking_date` 	DATE 			NOT NULL,
+	`room_id` 		int 			NOT NULL,
+	`user_id` 		int 			NOT NULL
 );
 
 DROP TABLE IF EXISTS `rooms`;
 CREATE TABLE `rooms` (
-	`id` 				int 		NOT NULL 	AUTO_INCREMENT,
-	`number` 			int 		NOT NULL 	AUTO_INCREMENT,
-	`hotel_id` 			int 		NOT NULL,
-	`type_id` 			tinyint 	NOT NULL,
-	PRIMARY KEY (`id`)
+	`id` 			int 			NOT NULL 	AUTO_INCREMENT		PRIMARY KEY,
+	`number` 		int 			NOT NULL 	AUTO_INCREMENT,
+	`hotel_id` 		int 			NOT NULL,
+	`type_id` 		tinyint 		NOT NULL
 );
 
 DROP TABLE IF EXISTS `types`;
 CREATE TABLE `types` (
-	`id` 				tinyint 	NOT NULL 	AUTO_INCREMENT,
-	`name` 				varchar(8) 	NOT NULL,
-	PRIMARY KEY (`id`)
+	`id` 			tinyint 		NOT NULL 	AUTO_INCREMENT		PRIMARY KEY,
+	`name` 			varchar(8) 		NOT NULL
 );
 
 DROP TABLE IF EXISTS `hotels`;
 CREATE TABLE `hotels` (
-	`id` 				int 		 NOT NULL 	AUTO_INCREMENT,
-	`name` 				varchar(20)  NOT NULL 						UNIQUE,
-	`image` 			varchar(100) NOT NULL 						UNIQUE,
-	PRIMARY KEY (`id`)
+	`id` 			int 		 	NOT NULL 	AUTO_INCREMENT		PRIMARY KEY,
+	`name` 			varchar(20)  	NOT NULL 						UNIQUE,
+	`image` 		varchar(100) 	NOT NULL 						UNIQUE
 );
 
 DROP TABLE IF EXISTS `reviews`;
 CREATE TABLE `reviews` (
-	`id` 				int 		 NOT NULL 	AUTO_INCREMENT,
-	`text` 				varchar(300) NOT NULL,
-	`raiting` 			int 		 NOT NULL,
-	`created_date` 		DATE 	 NOT NULL,
-	`hotels_id` 		int 		 NOT NULL,
-	`users_id` 			int 		 NOT NULL,
-	PRIMARY KEY (`id`)
+	`id` 			int 		 	NOT NULL 	AUTO_INCREMENT		PRIMARY KEY,
+	`text` 			varchar(300) 	NOT NULL,
+	`raiting` 		int 		 	NOT NULL,
+	`created_date` 	DATE 	 		NOT NULL,
+	`hotels_id` 	int 		 	NOT NULL,
+	`users_id` 		int 		 	NOT NULL
 );
 
 ALTER TABLE `users_roles` 

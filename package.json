@@ -1,0 +1,32 @@
+{
+  "name": "course",
+  "version": "1.0.0",
+  "description": "Booking ITechArt",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VRHaRdY/StudentLab-Booking.com-Vlad_Radkevich.git"
+  },
+  "keywords": [
+    "booking"
+  ],
+  "author": "Vlad Radkevich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VRHaRdY/StudentLab-Booking.com-Vlad_Radkevich/issues"
+  },
+  "homepage": "https://github.com/VRHaRdY/StudentLab-Booking.com-Vlad_Radkevich#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "mogoose": "0.0.1-security",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

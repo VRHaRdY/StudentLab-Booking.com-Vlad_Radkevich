@@ -1,0 +1,24 @@
+<!--API пдля добавления отеля-->
+
+<form action="/add" method="POST">
+
+  <h2>Add new hotel</h2>
+
+  <div class="input-field">      
+    <p>
+        <input type="File" name="hotel_image">
+        <label for="hotel_image">*Hotel image</label>
+    </p>
+
+    <p>
+        <input type="text" name="title">
+        <label for="title">*Name of the hotel</label>
+    </p>
+    <p>
+        <input type="text" name="number_of_rooms">
+        <label for="number_of_rooms">*Number of rooms (кол-во комнат)</label>
+    </p>
+  </div>
+
+  <button type="submit" class="btn">Add</button>
+</form>

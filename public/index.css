@@ -1,0 +1,45 @@
+.hotel {
+    margin-bottom: 1rem;
+  }
+  
+  .hotel span.completed {
+    text-decoration: line-through;
+  }
+  
+  .hotel label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background: #f3f3f3;
+    padding: 1rem;
+  }
+  
+  .hotel i {
+    z-index: 2;
+  }
+
+  .hotel_info label{
+    width: 70%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: #f3f3f3;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .hotel_info img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .title {
+   padding-left: 10px;
+  } 
+
+  .number {
+    padding-left: 50px;
+  }

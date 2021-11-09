@@ -1,0 +1,19 @@
+<!--Главная страница HTML API со списком всех отелей-->
+<h2>Hotels list</h2>
+{{#if hotels.length}}
+<ul>
+  {{#each hotels}}
+  <li class="hotel_info">
+      <label>
+        <img src="./src/nophoto.png">
+        <span class="title">{{title}}</span>
+        <span class="number">Кол-во комнат: {{number_of_rooms}}</span>
+        
+        <input type="hidden" value="{{_id}}" name="id">
+      </label>
+  </li>
+  {{/each}}
+</ul>
+{{else}}
+<p>No hotels in database!</p>
+{{/if}}

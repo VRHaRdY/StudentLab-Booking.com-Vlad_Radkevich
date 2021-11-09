@@ -53,7 +53,7 @@ router.get('/delete', async (req, res) => {
 
 router.post('/choose', async(req,res)=>{
   const hotel = await Hotel.findById(req.body.id)
-  //hotel.completed = !!req.body.completed
+  
   await hotel.delete()
 
   res.redirect('/delete')
